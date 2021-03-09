@@ -7,7 +7,6 @@ const tsxRegex = /\.tsx$/
 export default function macrosPlugin(): Plugin {
 	return {
 		name: "babel-macros",
-		enforce: "pre",
 		async transform(source, filename) {
 			if (filename.includes("node_modules")) {
 				return undefined
